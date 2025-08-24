@@ -141,5 +141,11 @@ header nav a:hover {
     padding: 1em 2em;
     border-radius: 6px;
     margin-top: 2em;
+    transition: .6s ease;
+}
+
+.about-page .action-section a:hover {
+    background: black;
+    color: white;
 }
 /* end of about page design */
