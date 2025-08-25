@@ -60,9 +60,12 @@ function Vans() {
       <h1 className="section-title">Explore our van options</h1>
       <div className="vans-container">
         {vans.map(van => (
-          <Link to={`/vans/${van.id}`}>
+          <Link 
+            to={`/vans/${van.id}`} 
+            aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
+          >
             <div className="van-card" key={van.id}>
-              <img src={van.imageUrl} alt={van.name} />
+              <img src={van.imageUrl} alt={`Image of ${van.name}`} />
               <div className="van-info">
                 <h2>{van.name}</h2>
                 <div className="price-section">
