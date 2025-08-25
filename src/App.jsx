@@ -60,22 +60,32 @@ function Vans() {
       <h1 className="section-title">Explore our van options</h1>
       <div className="vans-container">
         {vans.map(van => (
-          <div className="van-card" key={van.id}>
-            <img src={van.imageUrl} alt={van.name} />
-            <div className="van-info">
-              <h2>{van.name}</h2>
-              <div className="price-section">
-                <span className="van-price">{van.price}</span>
-                <span>/day</span>
+          <Link to={`/vans/${van.id}`}>
+            <div className="van-card" key={van.id}>
+              <img src={van.imageUrl} alt={van.name} />
+              <div className="van-info">
+                <h2>{van.name}</h2>
+                <div className="price-section">
+                  <span className="van-price">{van.price}</span>
+                  <span>/day</span>
+                </div>
               </div>
+              <span className={`van-type ${van.type}`}>
+                {van.type}
+              </span>
             </div>
-            <span className={`van-type ${van.type}`}>
-              {van.type}
-            </span>
-          </div>
+          </Link>
 
         ))}
       </div>
+    </section>
+  )
+}
+
+function VanDetails() {
+  return(
+    <section className="van-section">
+      <h1>Hello from van detail</h1>
     </section>
   )
 }
@@ -100,6 +110,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
+          <Route path="/vans/:id" element={<VanDetails />} />
         </Routes>
 
         <footer>
