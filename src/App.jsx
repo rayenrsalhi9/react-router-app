@@ -89,7 +89,7 @@ function Vans() {
 
 function VanDetails() {
 
-  const [details, setDetails] = React.useState({})
+  const [details, setDetails] = React.useState(null)
   const { id } = useParams()
 
   React.useEffect(() => {
@@ -105,7 +105,7 @@ function VanDetails() {
         Back to all vans
       </Link>
       {
-        Object.keys(details).length > 0 ?
+        details ?
         <div className="van">
           <img src={details.imageUrl} alt={`Image of ${details.name}`} />
           <div className="van-info">
