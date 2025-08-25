@@ -18,7 +18,7 @@ createServer({
     routes() {
         this.namespace = "api"
 
-        this.get("/vans", (schema, request) => {
+        this.get("/vans", (schema) => {
             return schema.vans.all()
         })
         

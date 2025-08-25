@@ -1,4 +1,6 @@
+import React from "react"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import('./server')
 
 function Home() {
   return (
@@ -37,8 +39,44 @@ function About() {
 }
 
 function Vans() {
+
+  const [vans, setVans] = React.useState([])
+
+  React.useEffect(() => {
+    async function fetchVans() {
+      try {
+        const res = await fetch('/api/vans')
+        const vans = await res.json()
+        setVans(vans.vans)
+      } catch(err) {
+        console.log('an error occured when fetching vans: ', err)
+      }
+    }
+    fetchVans()
+  }, [])
+
   return(
-    <h1>Vans page goes here</h1>
+    <section className="vans-section">
+      <h1 className="section-title">Explore our van options</h1>
+      <div className="vans-container">
+        {vans.map(van => (
+          <div className="van-card" key={van.id}>
+            <img src={van.imageUrl} alt={van.name} />
+            <div className="van-info">
+              <h2>{van.name}</h2>
+              <div className="price-section">
+                <span className="van-price">{van.price}</span>
+                <span>/day</span>
+              </div>
+            </div>
+            <span className={`van-type ${van.type}`}>
+              {van.type}
+            </span>
+          </div>
+
+        ))}
+      </div>
+    </section>
   )
 }
 
