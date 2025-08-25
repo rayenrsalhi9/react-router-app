@@ -225,7 +225,7 @@ footer {
     margin-right: .125em;
 }
 
-.van-card .van-type {
+.van-type {
     display: block;
     width: fit-content;
     color: #FFCC8D;
@@ -234,16 +234,100 @@ footer {
     text-transform: capitalize;
 }
 
-.van-card .van-type.simple {
+.van-type.simple {
     background: #E17654;
-    color: #f5f5f5;
+    color: white;
 }
 
-.van-card .van-type.rugged {
+.van-type.rugged {
     background: #115E59;
 }
 
-.van-card .van-type.luxury {
+.van-type.luxury {
     background: #111;
 }
 /* end of vans section design */
+
+/* start of van details section */
+.van-details a {
+    display: flex;
+    align-items: center;
+    color: #201F1D;
+    gap: .5em;
+    margin-bottom: 3em;
+}
+
+.van-details a svg {
+    color: #858585;
+}
+
+.van {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+@media(max-width: 768px) {
+    .van {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.van-details img {
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.van-details .van-info {
+    color: #111;
+}
+
+.van-details .van-info .van-type {
+    margin: .5em 0 1em;
+}
+
+.van-details .van-info .price {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+}
+
+.van-details .van-info .price::before {
+    content: '$';
+    margin-right: .25em;
+}
+
+.van-details .van-info .price span {
+    font-weight: 500;
+}
+
+.van-details .van-info .description {
+    line-height: 1.5;
+}
+
+.van-details .van-info button {
+    display: block;
+    width: 100%;
+
+    background-color: #FF8C38;
+    color: #f5f5f5;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 1em 2em;
+    margin-top: 2em;
+
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+.van-details .van-info button:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+/* end of van details section */

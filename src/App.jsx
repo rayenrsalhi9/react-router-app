@@ -1,5 +1,6 @@
 import React from "react"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link, useParams } from "react-router-dom"
+import { FaArrowLeft } from "react-icons/fa6";
 import('./server')
 
 function Home() {
@@ -62,9 +63,10 @@ function Vans() {
         {vans.map(van => (
           <Link 
             to={`/vans/${van.id}`} 
+            key={van.id}
             aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
           >
-            <div className="van-card" key={van.id}>
+            <div className="van-card">
               <img src={van.imageUrl} alt={`Image of ${van.name}`} />
               <div className="van-info">
                 <h2>{van.name}</h2>
@@ -86,10 +88,46 @@ function Vans() {
 }
 
 function VanDetails() {
+
+  const [details, setDetails] = React.useState({})
+  const { id } = useParams()
+
+  React.useEffect(() => {
+    fetch(`/api/vans/${id}`)
+    .then(res => res.json())
+    .then(data => setDetails(data.vans))
+  }, [id])
+
   return(
-    <section className="van-section">
-      <h1>Hello from van detail</h1>
-    </section>
+    <section className="van-details">
+      <Link to="/vans">
+        <FaArrowLeft />
+        Back to all vans
+      </Link>
+      {
+        Object.keys(details).length > 0 ?
+        <div className="van">
+          <img src={details.imageUrl} alt={`Image of ${details.name}`} />
+          <div className="van-info">
+            <h2>
+              {details.name}
+            </h2>
+            <span className={`van-type ${details.type}`}>
+              {details.type}
+            </span> 
+            <p className="price">
+              {details.price}
+              <span>/day</span>
+            </p>
+            <p className="description">
+              {details.description}
+            </p>
+            <button>Rent this van</button>
+          </div>
+        </div> :
+        <h2>Loading details...</h2>
+      }
+    </section> 
   )
 }
 
