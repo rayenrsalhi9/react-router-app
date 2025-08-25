@@ -36,6 +36,12 @@ function About() {
   )
 }
 
+function Vans() {
+  return(
+    <h1>Vans page goes here</h1>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -43,16 +49,19 @@ export default function App() {
       <div className="container">
 
         <header>
-          <h1>#vanlife</h1>
+          <Link to="/">
+            <h1>#vanlife</h1>
+          </Link>
           <nav>
-            <Link to="/">Home</Link>
             <Link to="/about">About</Link>
+            <Link to="/vans">Vans</Link>
           </nav>
         </header>
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/vans" element={<Vans />} />
         </Routes>
 
       </div>
