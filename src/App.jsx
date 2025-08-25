@@ -102,6 +102,10 @@ export default function App() {
           <Route path="/vans" element={<Vans />} />
         </Routes>
 
+        <footer>
+          &copy; {new Date().getFullYear()} #VANLIFE - All Rights Reserved
+        </footer>
+
       </div>
 
     </BrowserRouter>

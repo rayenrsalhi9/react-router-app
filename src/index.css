@@ -72,6 +72,15 @@ header nav a:hover {
 }
 /* end of header design */
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background: #111;
+    color: #f5f5f5;
+}
+
 /* start of home page design */
 .home-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home-bg.svg');
@@ -210,6 +219,7 @@ header nav a:hover {
     color: #FFCC8D;
     padding: .5em 1em;
     border-radius: 6px;
+    text-transform: capitalize;
 }
 
 .van-card .van-type.simple {
