@@ -9,7 +9,7 @@ function Home() {
       <p>
         Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
       </p>
-      <Link to="/about">Find your van</Link>
+      <Link to="/vans">Find your van</Link>
     </section>
   )
 }
@@ -30,7 +30,7 @@ function About() {
       <div className="action-section">
         <h2>Your destination is waiting.</h2>
         <h2>Your van is ready.</h2>
-        <Link to="/">Explore our vans</Link>
+        <Link to="/vans">Explore our vans</Link>
       </div>
     </section>
   )
