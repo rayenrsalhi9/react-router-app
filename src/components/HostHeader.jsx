@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function HostHeader() {
   return (
     <header className="host-header">
         <nav>
-            <Link to="/host">Dashboard</Link>
-            <Link to="/host/income">Income</Link>
-            <Link to="/host/reviews">Reviews</Link>
+            <NavLink to="/host" className={({isActive}) => isActive ? 'active' : null}>Dashboard</NavLink>
+            <NavLink to="/host/income" className={({isActive}) => isActive ? 'active' : null}>Income</NavLink>
+            <NavLink to="/host/reviews" className={({isActive}) => isActive ? 'active' : null}>Reviews</NavLink>
         </nav>
     </header>
   )
