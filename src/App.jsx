@@ -5,8 +5,8 @@ import Layout from "./components/Layout";
 
 import Home from "./pages/Home";
 import About from "./pages/About"
-import Vans from "./pages/Vans"
-import VanDetails from "./pages/VanDetails"
+import Vans from "./pages/vans/Vans"
+import VanDetails from "./pages/vans/VanDetails"
 
 export default function App() {
   return (
