@@ -23,7 +23,7 @@ export default function App() {
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetails />} />
 
-          <Route path="/host" element={<HostLayout />}>
+          <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
