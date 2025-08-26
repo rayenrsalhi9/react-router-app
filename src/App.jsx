@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import('./server')
 
+import Header from "./components/Header";
+import Footer from "./components/Footer"; 
+
 import Home from "./pages/Home";
 import About from "./pages/About"
 import Vans from "./pages/Vans"
@@ -12,15 +15,7 @@ export default function App() {
 
       <div className="container">
 
-        <header>
-          <Link to="/">
-            <h1>#vanlife</h1>
-          </Link>
-          <nav>
-            <Link to="/about">About</Link>
-            <Link to="/vans">Vans</Link>
-          </nav>
-        </header>
+        <Header />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,9 +24,7 @@ export default function App() {
           <Route path="/vans/:id" element={<VanDetails />} />
         </Routes>
 
-        <footer>
-          &copy; {new Date().getFullYear()} #VANLIFE - All Rights Reserved
-        </footer>
+        <Footer />
 
       </div>
 
