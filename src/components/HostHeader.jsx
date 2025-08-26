@@ -4,7 +4,7 @@ export default function HostHeader() {
   return (
     <header className="host-header">
         <nav>
-            <NavLink to="/host" className={({isActive}) => isActive ? 'active' : null}>Dashboard</NavLink>
+            <NavLink to="/host" end className={({isActive}) => isActive ? 'active' : null}>Dashboard</NavLink>
             <NavLink to="/host/income" className={({isActive}) => isActive ? 'active' : null}>Income</NavLink>
             <NavLink to="/host/reviews" className={({isActive}) => isActive ? 'active' : null}>Reviews</NavLink>
         </nav>
