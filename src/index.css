@@ -331,3 +331,9 @@ footer {
     color: white;
 }
 /* end of van details section */
+
+/* host header design */
+.host-header {
+    border-top: 2px solid #eee;
+}
+/* end of host header design */
