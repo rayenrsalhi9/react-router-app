@@ -338,3 +338,37 @@ footer {
     border-top: 2px solid #eee;
 }
 /* end of host header design */
+
+/* host vans card design */
+.host-vans {
+    background-color: #FFF7ED;
+}
+
+.host-vans h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.125em;
+}
+
+.host-vans-card {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    color: #111;
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 4px;
+}
+
+.host-vans-card img {
+    width: 65px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.host-vans-card p {
+    color: #4D4D4D;
+    margin-top: .25em;
+}
