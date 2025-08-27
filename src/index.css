@@ -344,6 +344,10 @@ footer {
     background-color: #FFF7ED;
 }
 
+.host-vans a {
+    text-decoration: none;
+}
+
 .host-vans h2 {
     font-size: 1.75rem;
     margin-bottom: 1.125em;
@@ -359,6 +363,13 @@ footer {
     padding: 1em;
     margin: 1em 0;
     border-radius: 4px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .6s ease;
+}
+
+.host-vans-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .host-vans-card img {
