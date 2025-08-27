@@ -452,6 +452,7 @@ a.return-to-all-van-link:hover {
 
 .host-van-description p {
     line-height: 1.5;
+    margin: .5em 0;
 }
 
 .host-van-pricing p {
