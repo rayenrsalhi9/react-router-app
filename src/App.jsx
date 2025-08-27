@@ -13,7 +13,11 @@ import Dashboard from './pages/host/Dashboard'
 import Income from './pages/host/Income'
 import Reviews from './pages/host/Reviews'
 import HostVans from "./pages/host/HostVans";
+
 import HostVanLayout from "./components/HostVanLayout";
+import VanDesc from "./pages/host/VanDesc";
+import VanPricing from "./pages/host/VanPricing";
+import VanPhotos from "./pages/host/VanPhotos";
 
 export default function App() {
   return (
@@ -30,7 +34,11 @@ export default function App() {
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
             <Route path="vans" element={<HostVans />} />
-            <Route path="vans/:id" element={<HostVanLayout />} />
+            <Route path="vans/:id" element={<HostVanLayout />}>
+              <Route index element={<VanDesc />} />
+              <Route path="pricing" element={<VanPricing />} />
+              <Route path="photos" element={<VanPhotos />} />
+            </Route>
           </Route>
         </Route>
       </Routes>
