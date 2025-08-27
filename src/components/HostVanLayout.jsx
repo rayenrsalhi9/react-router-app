@@ -27,7 +27,7 @@ export default function HostVanLayout() {
                 <>
                   <HostVanDetails vanDetails={vanDetails} />
                   <HostVanHeader />
-                  <Outlet/>
+                  <Outlet context={vanDetails}/>
                 </>
               ) : <h2>Loading...</h2>
             }

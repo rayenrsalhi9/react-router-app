@@ -1,7 +1,14 @@
+import { useOutletContext } from "react-router-dom"
+
 export default function VanDesc() {
+
+  const { description } = useOutletContext()
+
   return (
     <div className="host-van-description">
-      <h2>Van Description here</h2>
+      <p>
+        { description }
+      </p>
     </div>
   )
 }

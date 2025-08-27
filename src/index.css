@@ -438,3 +438,37 @@ a.return-to-all-van-link:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+
+/* van details sections design */
+.host-van-description,
+.host-van-pricing,
+.host-van-photos {
+    padding: .5em 2em;
+}
+
+.host-van-description p {
+    line-height: 1.5;
+}
+
+.host-van-pricing p {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.host-van-pricing p span {
+    font-size: 1rem;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.host-van-photos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.host-van-photos img {
+    width: 100px;
+    border-radius: 6px;
+}
