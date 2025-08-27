@@ -1,6 +1,6 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom"
-import { FaArrowLeft } from "react-icons/fa6";
+import { useParams } from "react-router-dom"
+import BackLink from '../../components/BackLink'
 
 export default function VanDetails() {
 
@@ -15,10 +15,7 @@ export default function VanDetails() {
 
   return(
     <section className="van-details">
-      <Link to="/vans" className="return-to-all-van-link">
-        <FaArrowLeft />
-        Back to all vans
-      </Link>
+      <BackLink />
       {
         details ?
         <div className="van">
