@@ -398,11 +398,8 @@ a.return-to-all-van-link:hover {
     display: flex;
     align-items: center;
     gap: 1em;
-    background-color: white;
     color: #111;
     padding: 2em;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .host-van-details-card img {
@@ -427,4 +424,16 @@ a.return-to-all-van-link:hover {
 
 .host-van-details-card .van-price span {
     font-weight: 500;
+}
+
+/* host van details wrapper: van details card + header */
+.host-van-details-wrapper,
+.host-van-details-wrapper header {
+    background-color: white;
+}
+
+.host-van-details-wrapper {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }

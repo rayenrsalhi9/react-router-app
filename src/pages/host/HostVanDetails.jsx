@@ -1,6 +1,5 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa'
+import { useParams } from 'react-router-dom'
 
 export default function HostVanDetails() {
 
@@ -16,27 +15,17 @@ export default function HostVanDetails() {
   }, [id])
 
   const vanElement = vanDetails ? (
-    <>
-      <Link to="/host/vans" className="return-to-all-van-link">
-        <FaArrowLeft />
-        Back to all vans
-      </Link>
-      <div className="host-van-details-card">
-        <img src={vanDetails.imageUrl} alt={`Image of ${vanDetails.name}`} />
-        <div className="host-van-details-card-info">
-          <span className={`van-type ${vanDetails.type}`}>
-            {vanDetails.type}
-          </span>
-          <h2>{vanDetails.name}</h2>
-          <p className='van-price'>${vanDetails.price}<span>/day</span></p>
-        </div>
+    <div className="host-van-details-card">
+      <img src={vanDetails.imageUrl} alt={`Image of ${vanDetails.name}`} />
+      <div className="host-van-details-card-info">
+        <span className={`van-type ${vanDetails.type}`}>
+          {vanDetails.type}
+        </span>
+        <h2>{vanDetails.name}</h2>
+        <p className='van-price'>${vanDetails.price}<span>/day</span></p>
       </div>
-    </>
+    </div>
   ) : <h2>Loading...</h2>
 
-  return (
-    <section className="host-van-details">
-        {vanElement}
-    </section>
-  )
+  return vanElement
 }
