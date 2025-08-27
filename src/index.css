@@ -251,9 +251,12 @@ footer {
 
 /* start of van details section */
 a.return-to-all-van-link {
+    width: fit-content;
+    text-underline-offset: 2px;
     display: flex;
     align-items: center;
     color: #201F1D;
+    font-weight: 600;
     gap: .5em;
     margin-bottom: 3em;
     transition: .6s ease;
@@ -265,6 +268,7 @@ a.return-to-all-van-link svg {
 
 a.return-to-all-van-link:hover {
     color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .van {
