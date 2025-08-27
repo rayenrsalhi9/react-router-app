@@ -250,16 +250,21 @@ footer {
 /* end of vans section design */
 
 /* start of van details section */
-.van-details a {
+a.return-to-all-van-link {
     display: flex;
     align-items: center;
     color: #201F1D;
     gap: .5em;
     margin-bottom: 3em;
+    transition: .6s ease;
 }
 
-.van-details a svg {
+a.return-to-all-van-link svg {
     color: #858585;
+}
+
+a.return-to-all-van-link:hover {
+    color: black;
 }
 
 .van {
@@ -382,4 +387,44 @@ footer {
 .host-vans-card p {
     color: #4D4D4D;
     margin-top: .25em;
+}
+
+/* host van details design */
+.host-van-details {
+    background-color: #FFF7ED;
+}
+
+.host-van-details-card {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: white;
+    color: #111;
+    padding: 2em;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.host-van-details-card img {
+    width: 170px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.host-van-details-card span.van-type {
+    display: block;
+}
+
+.host-van-details-card h2 {
+    margin: .5em 0;
+}
+
+.host-van-details-card .van-price {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.host-van-details-card .van-price span {
+    font-weight: 500;
 }

@@ -15,7 +15,7 @@ export default function VanDetails() {
 
   return(
     <section className="van-details">
-      <Link to="/vans">
+      <Link to="/vans" className="return-to-all-van-link">
         <FaArrowLeft />
         Back to all vans
       </Link>
