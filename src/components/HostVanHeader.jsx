@@ -4,9 +4,9 @@ export default function HostVanHeader() {
   return (
     <header>
         <nav>
-            <NavLink to="/host/vans/:id">Details</NavLink>
-            <NavLink to="/host/vans/:id/pricing">Pricing</NavLink>
-            <NavLink to="/host/vans/:id/photos">Photos</NavLink>
+            <NavLink to="." end className={({isActive}) => isActive ? 'active' : null}>Details</NavLink>
+            <NavLink to="pricing" className={({isActive}) => isActive ? 'active' : null}>Pricing</NavLink>
+            <NavLink to="photos" className={({isActive}) => isActive ? 'active' : null}>Photos</NavLink>
         </nav>
     </header>
   )
