@@ -22,7 +22,7 @@ export default function Vans() {
   const typeFilter = searchParams.get('type')
 
   const vansToDisplay = typeFilter ? 
-  vans.filter(van => van.type === typeFilter) :
+  vans.filter(van => van.type.toLowerCase() === typeFilter.toLowerCase()) :
   vans
 
   return(
