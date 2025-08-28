@@ -7,13 +7,14 @@ export default function Vans() {
 
   const [vans, setVans] = React.useState([])
   const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
     setLoading(true)
-    fetchVans().then(data => {
-      setVans(data)
-      setLoading(false)
-    })
+    fetchVans()
+      .then(data => setVans(data))
+      .catch(err => setError(err))
+      .finally(() => setLoading(false))
   }, [])
 
   const [searchParams, setSearchParams] = useSearchParams()
@@ -25,6 +26,14 @@ export default function Vans() {
 
   if(loading) {
     return <h2>Loading...</h2>
+  }
+
+  if(error) {
+    return(
+      <>
+        <h2>Error: {error.message}</h2>
+      </>
+    )
   }
 
   return(
