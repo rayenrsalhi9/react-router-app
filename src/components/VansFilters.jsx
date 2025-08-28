@@ -1,12 +1,10 @@
-import { NavLink, Link } from 'react-router-dom'
-
-export default function VansFilters() {
+export default function VansFilters({ setSearchParams }) {
     return(
         <nav className="vans-filters">
-            <NavLink to='?type=simple' className='filter simple'>Simple</NavLink>
-            <NavLink to='?type=rugged' className='filter rugged'>Rugged</NavLink>
-            <NavLink to='?type=luxury' className='filter luxury'>Luxury</NavLink>
-            <Link to='.' className='clear-filters-link'>Clear filters</Link>
+            <button className='filter simple' onClick={() => setSearchParams({type: 'simple'})}>Simple</button>
+            <button className='filter rugged' onClick={() => setSearchParams({type: 'rugged'})}>Rugged</button>
+            <button className='filter luxury' onClick={() => setSearchParams({type: 'luxury'})}>Luxury</button>
+            <button className='clear-filters-link' onClick={() => setSearchParams({})}>Clear filters</button>
         </nav>
     )
 }

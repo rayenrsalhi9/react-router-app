@@ -18,7 +18,7 @@ export default function Vans() {
     fetchVans()
   }, [])
 
-  const [searchParams, _] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get('type')
 
   const vansToDisplay = typeFilter ? 
@@ -29,7 +29,7 @@ export default function Vans() {
     <section className="vans-section">
       <h1 className="section-title">Explore our van options</h1>
 
-      <VansFilters />
+      <VansFilters setSearchParams={setSearchParams} />
 
       <div className="vans-container">
         {vansToDisplay.map(van => (

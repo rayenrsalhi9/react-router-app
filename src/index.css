@@ -487,16 +487,14 @@ a.return-to-all-van-link:hover {
     margin-bottom: 2em;
 }
 
-.vans-filters a {
-    text-decoration: none;
-    font-weight: 600;
-}
-
 .vans-filters .filter {
+    font-weight: 600;
+    border: none;
     background: #FFEAD0;
     color: #4D4D4D;
     border-radius: 6px;
     padding: .5em 1em;
+    cursor: pointer;
     transition: .6s ease;
 }
 
@@ -519,6 +517,9 @@ a.return-to-all-van-link:hover {
 }
 
 .vans-filters .clear-filters-link {
+    background: none;
+    border: none;
+    font-weight: 600;
     color: #4D4D4D;
     text-decoration: underline;
     text-underline-offset: 2px;
