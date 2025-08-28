@@ -19,6 +19,8 @@ import VanDesc from "./pages/host/VanDesc";
 import VanPricing from "./pages/host/VanPricing";
 import VanPhotos from "./pages/host/VanPhotos";
 
+import NotFound from "./components/NotFound";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -40,6 +42,7 @@ export default function App() {
               <Route path="photos" element={<VanPhotos />} />
             </Route>
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

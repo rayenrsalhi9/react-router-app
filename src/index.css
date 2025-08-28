@@ -530,3 +530,37 @@ a.return-to-all-van-link:hover {
 .vans-filters .clear-filters-link:hover {
     color: black;
 }
+
+/* not found section design */
+.not-found-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF7ED;
+}
+
+.not-found-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+.not-found-section a {
+    display: block;
+    margin-top: 1em;
+    text-decoration: none;
+    background: #111;
+    color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    padding: 1em 3em;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: .6s ease;
+}
+
+.not-found-section a:hover {
+    background: black;
+    color: white;
+}
