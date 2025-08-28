@@ -6,8 +6,14 @@ import { fetchVans } from "../../api"
 export default function Vans() {
 
   const [vans, setVans] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+
   React.useEffect(() => {
-    fetchVans().then(data => setVans(data))
+    setLoading(true)
+    fetchVans().then(data => {
+      setVans(data)
+      setLoading(false)
+    })
   }, [])
 
   const [searchParams, setSearchParams] = useSearchParams()
@@ -16,6 +22,10 @@ export default function Vans() {
   const vansToDisplay = typeFilter ? 
   vans.filter(van => van.type.toLowerCase() === typeFilter.toLowerCase()) :
   vans
+
+  if(loading) {
+    return <h2>Loading...</h2>
+  }
 
   return(
     <section className="vans-section">
