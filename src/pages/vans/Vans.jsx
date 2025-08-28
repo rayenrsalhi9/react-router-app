@@ -36,6 +36,7 @@ export default function Vans() {
           <Link 
             to={van.id} 
             key={van.id}
+            state={{ search: searchParams.toString(), type: typeFilter}}
             aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
           >
             <div className="van-card">

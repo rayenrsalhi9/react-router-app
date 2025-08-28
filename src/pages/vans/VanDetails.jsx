@@ -1,11 +1,13 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useLocation } from "react-router-dom"
 import BackLink from '../../components/BackLink'
 
 export default function VanDetails() {
 
   const [details, setDetails] = React.useState(null)
   const { id } = useParams()
+
+  const {state} = useLocation()
 
   React.useEffect(() => {
     fetch(`/api/vans/${id}`)
@@ -15,7 +17,7 @@ export default function VanDetails() {
 
   return(
     <section className="van-details">
-      <BackLink />
+      <BackLink state={state} />
       {
         details ?
         <div className="van">
