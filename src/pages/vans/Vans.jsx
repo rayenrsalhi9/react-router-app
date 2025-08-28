@@ -20,21 +20,13 @@ export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get('type')
 
-  const vansToDisplay = typeFilter ? 
-  vans.filter(van => van.type.toLowerCase() === typeFilter.toLowerCase()) :
-  vans
+  const vansToDisplay = 
+    typeFilter 
+    ? vans.filter(van => van.type.toLowerCase() === typeFilter.toLowerCase()) 
+    : vans
 
-  if(loading) {
-    return <h2>Loading...</h2>
-  }
-
-  if(error) {
-    return(
-      <>
-        <h2>Error: {error.message}</h2>
-      </>
-    )
-  }
+  if(loading) return <h2>Loading...</h2>
+  if(error) return <h2>An error occured: {error.message}</h2>
 
   return(
     <section className="vans-section">
@@ -43,29 +35,30 @@ export default function Vans() {
       <VansFilters typeFilter={typeFilter} setSearchParams={setSearchParams} />
 
       <div className="vans-container">
-        {vansToDisplay.map(van => (
-          <Link 
-            to={van.id} 
-            key={van.id}
-            state={{ search: searchParams.toString(), type: typeFilter}}
-            aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
-          >
-            <div className="van-card">
-              <img src={van.imageUrl} alt={`Image of ${van.name}`} />
-              <div className="van-info">
-                <h2>{van.name}</h2>
-                <div className="price-section">
-                  <span className="van-price">{van.price}</span>
-                  <span>/day</span>
+        {
+          vansToDisplay.map(van => (
+            <Link 
+              to={van.id} 
+              key={van.id}
+              state={{ search: searchParams.toString(), type: typeFilter}}
+              aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
+            >
+              <div className="van-card">
+                <img src={van.imageUrl} alt={`Image of ${van.name}`} />
+                <div className="van-info">
+                  <h2>{van.name}</h2>
+                  <div className="price-section">
+                    <span className="van-price">{van.price}</span>
+                    <span>/day</span>
+                  </div>
                 </div>
+                <span className={`van-type ${van.type}`}>
+                  {van.type}
+                </span>
               </div>
-              <span className={`van-type ${van.type}`}>
-                {van.type}
-              </span>
-            </div>
-          </Link>
-
-        ))}
+            </Link>
+          ))
+        }
       </div>
     </section>
   )
