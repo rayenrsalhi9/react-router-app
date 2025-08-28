@@ -34,7 +34,7 @@ export default function Vans() {
       <div className="vans-container">
         {vansToDisplay.map(van => (
           <Link 
-            to={`/vans/${van.id}`} 
+            to={van.id} 
             key={van.id}
             aria-label={`View details for ${van.name}, priced at $${van.price} per day`}
           >

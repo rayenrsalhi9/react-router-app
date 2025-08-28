@@ -21,13 +21,13 @@ export default function HostVans() {
             <h2>Your listed vans</h2>
             <div className="host-vans-container">
               {
-                hostVans.map(v => (
-                  <Link to={`/host/vans/${v.id}`} key={v.id}>
+                hostVans.map(van => (
+                  <Link to={van.id} key={van.id}>
                     <div className="host-vans-card">
-                      <img src={v.imageUrl} alt={`Image of ${v.name}`} />
+                      <img src={van.imageUrl} alt={`Image of ${van.name}`} />
                       <div className="host-vans-card-info">
-                        <h3>{v.name}</h3>
-                        <p>${v.price}/day</p>
+                        <h3>{van.name}</h3>
+                        <p>${van.price}/day</p>
                       </div>
                     </div>
                   </Link>
