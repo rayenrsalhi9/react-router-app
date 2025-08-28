@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 import VansFilters from "../../components/VansFilters"
 
 export default function Vans() {
 
   const [vans, setVans] = React.useState([])
-
   React.useEffect(() => {
     async function fetchVans() {
       try {
@@ -19,6 +18,13 @@ export default function Vans() {
     fetchVans()
   }, [])
 
+  const [searchParams, _] = useSearchParams()
+  const typeFilter = searchParams.get('type')
+
+  const vansList = typeFilter ? 
+  vans.filter(van => van.type === typeFilter) :
+  vans
+
   return(
     <section className="vans-section">
       <h1 className="section-title">Explore our van options</h1>
@@ -26,7 +32,7 @@ export default function Vans() {
       <VansFilters />
 
       <div className="vans-container">
-        {vans.map(van => (
+        {vansList.map(van => (
           <Link 
             to={`/vans/${van.id}`} 
             key={van.id}
