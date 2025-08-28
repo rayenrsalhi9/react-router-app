@@ -523,6 +523,7 @@ a.return-to-all-van-link:hover {
     color: #4D4D4D;
     text-decoration: underline;
     text-underline-offset: 2px;
+    cursor: pointer;
     transition: .6s ease;
 }
 
