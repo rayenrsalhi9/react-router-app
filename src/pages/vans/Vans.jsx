@@ -21,7 +21,7 @@ export default function Vans() {
   const [searchParams, _] = useSearchParams()
   const typeFilter = searchParams.get('type')
 
-  const vansList = typeFilter ? 
+  const vansToDisplay = typeFilter ? 
   vans.filter(van => van.type === typeFilter) :
   vans
 
@@ -32,7 +32,7 @@ export default function Vans() {
       <VansFilters />
 
       <div className="vans-container">
-        {vansList.map(van => (
+        {vansToDisplay.map(van => (
           <Link 
             to={`/vans/${van.id}`} 
             key={van.id}
