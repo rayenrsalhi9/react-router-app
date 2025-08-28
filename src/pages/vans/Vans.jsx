@@ -29,7 +29,7 @@ export default function Vans() {
     <section className="vans-section">
       <h1 className="section-title">Explore our van options</h1>
 
-      <VansFilters setSearchParams={setSearchParams} />
+      <VansFilters searchParams={searchParams} setSearchParams={setSearchParams} />
 
       <div className="vans-container">
         {vansToDisplay.map(van => (
