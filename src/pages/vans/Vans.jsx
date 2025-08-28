@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import VansFilters from "../../components/VansFilters"
 
 export default function Vans() {
 
@@ -21,6 +22,9 @@ export default function Vans() {
   return(
     <section className="vans-section">
       <h1 className="section-title">Explore our van options</h1>
+
+      <VansFilters />
+
       <div className="vans-container">
         {vans.map(van => (
           <Link 

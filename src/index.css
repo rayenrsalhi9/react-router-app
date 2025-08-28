@@ -477,3 +477,54 @@ a.return-to-all-van-link:hover {
     width: 100px;
     border-radius: 6px;
 }
+
+/* vans filters section */
+.vans-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.vans-filters a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.vans-filters .filter {
+    background: #FFEAD0;
+    color: #4D4D4D;
+    border-radius: 6px;
+    padding: .5em 1em;
+    transition: .6s ease;
+}
+
+.vans-filters .filter.simple:hover,
+.vans-filters .filter.simple.active {
+    background: #E17654;
+    color: white;
+}
+
+.vans-filters .filter.luxury:hover,
+.vans-filters .filter.luxury.active {
+    background: #111;
+    color: #FFEAD0;
+}
+
+.vans-filters .filter.rugged:hover,
+.vans-filters .filter.rugged.active {
+    background: #115E59;
+    color: #FFEAD0;
+}
+
+.vans-filters .clear-filters-link {
+    color: #4D4D4D;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: .6s ease;
+}
+
+.vans-filters .clear-filters-link:hover {
+    color: black;
+}
