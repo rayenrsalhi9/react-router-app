@@ -1,21 +1,13 @@
 import React from "react"
 import { Link, useSearchParams } from "react-router-dom"
 import VansFilters from "../../components/VansFilters"
+import { fetchVans } from "../../api"
 
 export default function Vans() {
 
   const [vans, setVans] = React.useState([])
   React.useEffect(() => {
-    async function fetchVans() {
-      try {
-        const res = await fetch('/api/vans')
-        const vans = await res.json()
-        setVans(vans.vans)
-      } catch(err) {
-        console.log('an error occured when fetching vans: ', err)
-      }
-    }
-    fetchVans()
+    fetchVans().then(data => setVans(data))
   }, [])
 
   const [searchParams, setSearchParams] = useSearchParams()

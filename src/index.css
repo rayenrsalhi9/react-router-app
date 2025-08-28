@@ -555,7 +555,6 @@ a.return-to-all-van-link:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: fit-content;
     padding: 1em 3em;
-    border: 2px solid black;
     border-radius: 6px;
     transition: .6s ease;
 }
