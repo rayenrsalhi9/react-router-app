@@ -79,7 +79,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.025em;
@@ -264,7 +264,7 @@ footer {
 }
 
 .about-page h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
@@ -275,7 +275,6 @@ footer {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    font-size: 1.125rem;
 }
 
 .about-page .action-section {
@@ -287,7 +286,7 @@ footer {
 }
 
 .about-page .action-section h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
     color: var(--text-primary);
@@ -305,7 +304,6 @@ footer {
     color: white;
     padding: 0.875rem 2rem;
     border-radius: var(--radius);
-    font-weight: 600;
     transition: all 0.2s ease;
     box-shadow: var(--shadow-sm);
 }
@@ -323,10 +321,6 @@ footer {
     
     .about-page .action-section {
         padding: 2rem;
-    }
-    
-    .about-page .action-section h2 {
-        font-size: 1.5rem;
     }
 }
 
