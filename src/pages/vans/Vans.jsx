@@ -25,8 +25,8 @@ export default function Vans() {
     ? vans.filter(van => van.type.toLowerCase() === typeFilter.toLowerCase()) 
     : vans
 
-  if(loading) return <h2>Loading...</h2>
-  if(error) return <h2>An error occured: {error.message}</h2>
+  if(loading) return <h2 aria-live="polite">Loading...</h2>
+  if(error) return <h2 aria-live="assertive">An error occured: {error.message}</h2>
 
   return(
     <section className="vans-section">

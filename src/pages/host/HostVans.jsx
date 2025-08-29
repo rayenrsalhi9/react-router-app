@@ -22,7 +22,11 @@ export default function HostVans() {
             <div className="host-vans-container">
               {
                 hostVans.map(van => (
-                  <Link to={van.id} key={van.id}>
+                  <Link 
+                    to={van.id} 
+                    key={van.id}
+                    aria-label={`View details for your van ${van.name}, priced at $${van.price} per day`}
+                  >
                     <div className="host-vans-card">
                       <img src={van.imageUrl} alt={`Image of ${van.name}`} />
                       <div className="host-vans-card-info">
