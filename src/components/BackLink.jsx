@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaArrowLeft } from 'react-icons/fa'
 
-export default function BackLink({state}) {
+export default function BackLink({state = {search: null}}) {
     return (
         <Link 
             to={state.search ? `..?${state.search}` : '..'} 
