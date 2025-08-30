@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -17,11 +18,15 @@
     --radius: 0.5rem;
     --radius-lg: 0.75rem;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 body {
@@ -36,10 +41,18 @@ body {
 a {
     text-decoration: none;
     color: var(--text-primary);
+=======
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: #111;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .container {
     width: 100%;
+<<<<<<< HEAD
     max-width: 1200px;
     margin: 0 auto;
     background: var(--background);
@@ -65,10 +78,31 @@ section {
 }
 
 /* Modern Header Design */
+=======
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+}
+
+section {
+    min-height: calc(100vh - 82px);
+    padding: 2em;
+}
+
+@media(max-width: 768px) {
+    section {
+        min-height: calc(100dvh - 85px);
+        padding: 1em;
+    }
+}
+
+/* start of header design */
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     background: var(--background);
     padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--border);
@@ -83,16 +117,39 @@ header h1 {
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.025em;
+=======
+
+    background: #FFF7ED;
+
+    padding: 1.5em 2em;
+}
+
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 1.75rem;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 header a {
     text-decoration: none;
+<<<<<<< HEAD
     color: inherit;
+=======
+    color: #111;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 header nav {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 2rem;
 }
 
@@ -160,11 +217,45 @@ header nav a.active::after {
         gap: 0.75rem;
     }
 }
+=======
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav a {
+    color: #4D4D4D;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .6s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: .5em;
+        gap: .5em;
+    }
+    header nav {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+}
+/* end of header design */
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     padding: 2rem;
     background: var(--surface);
     color: var(--text-secondary);
@@ -176,10 +267,32 @@ footer {
 /* Modern Home Page Design */
 .home-page {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+=======
+    text-align: center;
+    padding: 2em;
+    background: #111;
+    color: #f5f5f5;
+}
+
+@media(max-width: 768px) {
+    footer {
+        padding: 1.25em;
+    }
+}
+
+/* start of home page design */
+.home-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     color: white;
     text-align: center;
     position: relative;
@@ -332,18 +445,120 @@ footer {
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.025em;
+=======
+
+    color: white;
+    text-align: center;
+}
+
+.home-page h1 {
+    font-size: 3rem;
+}
+
+.home-page p {
+    margin: 1em auto;
+    line-height: 1.5;
+}
+
+.home-page a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-wrap: nowrap;
+    background: #FF8C38;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1em 3em;
+    border-radius: 6px;
+    transition: .6s ease;
+}
+
+.home-page a:hover {
+    background: #ff6a00;
+}
+
+@media(max-width: 768px) {
+    .home-page h1 {
+        font-size: 2.125rem;
+    }
+    .home-page a {
+        padding: .75em 1.25em;
+    }
+}
+/* end of home page design */
+
+/* start of about page design */
+.about-page img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-page h1 {
+    color: #111;
+    font-size: 2.5rem;
+    margin: .5em 0;
+}
+
+.about-page p {
+    color: #111;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    font-size: 1.125rem;
+}
+
+.about-page .action-section {
+    background: #FFCC8D;
+    border-radius: 6px;
+    padding: 2em;
+}
+
+.about-page .action-section h2 {
+    margin: .25em 0;
+    font-size: 1.75rem;
+}
+
+.about-page .action-section a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    background: #111;
+    color: #f5f5f5;
+    padding: 1em 2em;
+    border-radius: 6px;
+    margin-top: 2em;
+    transition: .6s ease;
+}
+
+.about-page .action-section a:hover {
+    background: black;
+    color: white;
+}
+/* end of about page design */
+
+/* start of vans section design */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1em;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-container {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+=======
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-container a {
     text-decoration: none;
+<<<<<<< HEAD
     transition: all 0.3s ease;
 }
 
@@ -363,12 +578,27 @@ footer {
 .vans-container a:hover .van-card {
     box-shadow: var(--shadow-lg);
     border-color: var(--primary);
+=======
+    border-radius: 6px;
+    transition: .6s;
+}
+
+.vans-container a:hover,
+.vans-container a:focus {
+    background: #f5f5f5;
+    transform: scale(1.01);
+}
+
+.vans-container .van-card {
+    color: #111;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .van-card img {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+<<<<<<< HEAD
     transition: transform 0.3s ease;
 }
 
@@ -416,10 +646,48 @@ footer {
 
 .van-type.simple {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+=======
+    border-radius: 6px;
+}
+
+.van-card .van-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: .5em;
+}
+
+.van-card .van-info .price-section span {
+    display: block;
+}
+
+.van-card .van-info .price-section span.van-price {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.van-card .van-info .price-section span.van-price::before {
+    content: '$';
+    margin-right: .125em;
+}
+
+.van-type {
+    display: block;
+    width: fit-content;
+    color: #FFCC8D;
+    padding: .5em 1em;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.van-type.simple {
+    background: #E17654;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
     color: white;
 }
 
 .van-type.rugged {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #059669 0%, #047857 100%);
     color: white;
 }
@@ -473,11 +741,55 @@ a.return-to-all-van-link:hover {
     .van {
         grid-template-columns: 1fr;
         gap: 2rem;
+=======
+    background: #115E59;
+}
+
+.van-type.luxury {
+    background: #111;
+}
+/* end of vans section design */
+
+/* start of van details section */
+a.return-to-all-van-link {
+    width: fit-content;
+    text-underline-offset: 2px;
+    display: flex;
+    align-items: center;
+    color: #201F1D;
+    font-weight: 600;
+    gap: .5em;
+    margin-bottom: 3em;
+    transition: .6s ease;
+}
+
+a.return-to-all-van-link svg {
+    color: #858585;
+}
+
+a.return-to-all-van-link:hover {
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.van {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+@media(max-width: 768px) {
+    .van {
+        flex-direction: column;
+        justify-content: center;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
     }
 }
 
 .van-details img {
     width: 100%;
+<<<<<<< HEAD
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
@@ -502,10 +814,30 @@ a.return-to-all-van-link:hover {
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 1.5rem;
+=======
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.van-details .van-info {
+    color: #111;
+}
+
+.van-details .van-info .van-type {
+    margin: .5em 0 1em;
+}
+
+.van-details .van-info .price {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .van-details .van-info .price::before {
     content: '$';
+<<<<<<< HEAD
     margin-right: 0.125em;
 }
 
@@ -538,18 +870,73 @@ a.return-to-all-van-link:hover {
     background: var(--surface);
     border-radius: var(--radius-lg);
     padding: 2rem;
+=======
+    margin-right: .25em;
+}
+
+.van-details .van-info .price span {
+    font-weight: 500;
+}
+
+.van-details .van-info .description {
+    line-height: 1.5;
+}
+
+.van-details .van-info button {
+    display: block;
+    width: 100%;
+
+    background-color: #FF8C38;
+    color: #f5f5f5;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 1em 2em;
+    margin-top: 2em;
+
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+.van-details .van-info button:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+/* end of van details section */
+
+/* host header design */
+.host-header {
+    border-top: 2px solid #eee;
+}
+/* end of host header design */
+
+/* host vans card design */
+.host-vans {
+    background-color: #FFF7ED;
+}
+
+.host-vans a {
+    text-decoration: none;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .host-vans h2 {
     font-size: 1.75rem;
+<<<<<<< HEAD
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
+=======
+    margin-bottom: 1.125em;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .host-vans-card {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 1.5rem;
     background: var(--background);
     padding: 1.5rem;
@@ -575,11 +962,45 @@ a.return-to-all-van-link:hover {
 .host-vans-card p {
     color: var(--text-secondary);
     margin-top: 0.25rem;
+=======
+    gap: 1em;
+
+    color: #111;
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 4px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .6s ease;
+}
+
+.host-vans-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.host-vans-card img {
+    width: 65px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.host-vans-card p {
+    color: #4D4D4D;
+    margin-top: .25em;
+}
+
+/* host van details design */
+.host-van-details {
+    background-color: #FFF7ED;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .host-van-details-card {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 2rem;
     background: var(--background);
     padding: 2rem;
@@ -620,11 +1041,76 @@ host-van-photos {
 .host-van-pricing p {
     color: var(--text-secondary);
     line-height: 1.7;
+=======
+    gap: 1em;
+    color: #111;
+    padding: 2em;
+}
+
+.host-van-details-card img {
+    width: 170px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.host-van-details-card span.van-type {
+    display: block;
+}
+
+.host-van-details-card h2 {
+    margin: .5em 0;
+}
+
+.host-van-details-card .van-price {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.host-van-details-card .van-price span {
+    font-weight: 500;
+}
+
+/* host van details wrapper: van details card + header */
+.host-van-details-wrapper,
+.host-van-details-wrapper header {
+    background-color: white;
+}
+
+.host-van-details-wrapper {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* van details sections design */
+.host-van-description,
+.host-van-pricing,
+.host-van-photos {
+    padding: .5em 2em;
+}
+
+.host-van-description p {
+    line-height: 1.5;
+    margin: .5em 0;
+}
+
+.host-van-pricing p {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.host-van-pricing p span {
+    font-size: 1rem;
+    color: #4D4D4D;
+    font-weight: 500;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .host-van-photos {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     gap: 1rem;
 }
 
@@ -641,10 +1127,29 @@ host-van-photos {
     gap: 0.75rem;
     margin-bottom: 2rem;
     justify-content: center;
+=======
+    align-items: center;
+    gap: 1em;
+}
+
+.host-van-photos img {
+    width: 100px;
+    border-radius: 6px;
+}
+
+/* vans filters section */
+.vans-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-filters .filter {
     font-weight: 600;
+<<<<<<< HEAD
     border: 1px solid var(--border);
     background: var(--background);
     color: var(--text-secondary);
@@ -658,32 +1163,57 @@ host-van-photos {
 .vans-filters .filter:hover {
     border-color: var(--primary);
     color: var(--primary);
+=======
+    border: none;
+    background: #FFEAD0;
+    color: #4D4D4D;
+    border-radius: 6px;
+    padding: .5em 1em;
+    cursor: pointer;
+    transition: .6s ease;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-filters .filter.simple:hover,
 .vans-filters .filter.simple.active {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
     border-color: transparent;
+=======
+    background: #E17654;
+    color: white;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-filters .filter.luxury:hover,
 .vans-filters .filter.luxury.active {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: white;
     border-color: transparent;
+=======
+    background: #111;
+    color: #FFEAD0;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-filters .filter.rugged:hover,
 .vans-filters .filter.rugged.active {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #059669 0%, #047857 100%);
     color: white;
     border-color: transparent;
+=======
+    background: #115E59;
+    color: #FFEAD0;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
 
 .vans-filters .clear-filters-link {
     background: none;
     border: none;
+<<<<<<< HEAD
     color: var(--primary);
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -697,11 +1227,27 @@ host-van-photos {
 }
 
 /* Modern Not Found */
+=======
+    font-weight: 600;
+    color: #4D4D4D;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+.vans-filters .clear-filters-link:hover {
+    color: black;
+}
+
+/* not found section design */
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 .not-found-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     text-align: center;
     padding: 4rem 2rem;
 }
@@ -733,4 +1279,31 @@ host-van-photos {
 .not-found-section a:hover {
     background: var(--primary-dark);
     transform: translateY(-1px);
+=======
+    background-color: #FFF7ED;
+}
+
+.not-found-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+.not-found-section a {
+    display: block;
+    margin-top: 1em;
+    text-decoration: none;
+    background: #111;
+    color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    padding: 1em 3em;
+    border-radius: 6px;
+    transition: .6s ease;
+}
+
+.not-found-section a:hover {
+    background: black;
+    color: white;
+>>>>>>> 9f801f8 (returned to the original design, but i'm doing all work by myself, AI just ruined it.)
 }
